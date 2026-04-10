@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사과 게임 (Apple Game)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="info-card">
+                <span class="label">점수</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="title-container">
+                <h1>사과 게임</h1>
+                <p>드래그해서 합이 <strong>10</strong>인 숫자들을 모두 지우세요!</p>
+            </div>
+            <div class="info-card">
+                <span class="label">남은 시간</span>
+                <span class="value timer" id="timer">120</span>
+            </div>
+        </div>
+
+        <div class="board-wrapper">
+            <div class="game-board" id="board" draggable="false">
+                <!-- Javascript will populate apples here -->
+                <div id="selection-box" class="selection-box"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn" class="btn primary-btn">새 게임 시작</button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal-overlay" id="game-over-modal">
+        <div class="modal">
+            <h2>게임 종료!</h2>
+            <p>축하합니다. 당신의 최종 점수는</p>
+            <div class="final-score" id="final-score">0</div>
+            <button id="modal-reset-btn" class="btn primary-btn">다시 도전하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
